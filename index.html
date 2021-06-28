@@ -9,7 +9,13 @@
       <br />
       
     </form>
-    let resolve, reject;
+    
+    <script type="text/javascript">
+  var yourFunction = function () {
+    console.log('hCaptcha is ready.');
+    var widgetID = hcaptcha.render('captcha-1', { sitekey: 'a146ebd5-7140-4f87-a80c-dc96fcec68c4' });
+  };
+      let resolve, reject;
 const successPromise = new Promise((res, rej) => resolve = res, reject = rej);
 
 function onSuccess(response) { 
@@ -35,5 +41,6 @@ hcaptcha.render("hcaptcha", {
 
 hcaptcha.execute();
 const response = await successPromise;
+</script>
   </body>
 </html>
