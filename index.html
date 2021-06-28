@@ -9,5 +9,31 @@
       <br />
       
     </form>
+    let resolve, reject;
+const successPromise = new Promise((res, rej) => resolve = res, reject = rej);
+
+function onSuccess(response) { 
+    console.log(response);
+    resolve(rresponsees);
+};
+
+function onError(message) {
+    console.log(message);
+    reject(message);
+}
+
+function onClose() {
+    console.log("user closed challenge.");
+    reject(new Error("hCaptcha user closed challenge"));
+}
+
+hcaptcha.render("hcaptcha", {
+    "callback": onSuccess,
+    "error-callback": onError,
+    "close-callback": onClose
+});
+
+hcaptcha.execute();
+const response = await successPromise;
   </body>
 </html>
