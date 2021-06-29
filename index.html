@@ -4,43 +4,11 @@
     <script src="https://hcaptcha.com/1/api.js" async defer></script>
   </head>
   <body>
-    <form action="" method="POST">
+    <form action="home.html" method="POST">
+      
       <div class="h-captcha" data-sitekey="a146ebd5-7140-4f87-a80c-dc96fcec68c4"></div>
       <br />
-      
+      <input type="submit" value="Submit" />
     </form>
-    
-    <script type="text/javascript">
-  var yourFunction = function () {
-    console.log('hCaptcha is ready.');
-    var widgetID = hcaptcha.render('captcha-1', { sitekey: 'a146ebd5-7140-4f87-a80c-dc96fcec68c4' });
-  };
-      let resolve, reject;
-const successPromise = new Promise((res, rej) => resolve = res, reject = rej);
-
-function onSuccess(response) { 
-    console.log(response);
-    resolve(rresponsees);
-};
-
-function onError(message) {
-    console.log(message);
-    reject(message);
-}
-
-function onClose() {
-    console.log("user closed challenge.");
-    reject(new Error("hCaptcha user closed challenge"));
-}
-
-hcaptcha.render("hcaptcha", {
-    "callback": onSuccess,
-    "error-callback": onError,
-    "close-callback": onClose
-});
-
-hcaptcha.execute();
-const response = await successPromise;
-</script>
   </body>
 </html>
